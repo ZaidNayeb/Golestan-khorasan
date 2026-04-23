@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="112" viewBox="0 0 360 112" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="28" y1="20" x2="332" y2="92" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F46CC"/>
+      <stop offset="1" stop-color="#1D63FF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="360" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0A2F83" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="336" height="88" rx="28" fill="url(#bg)"/>
+    <circle cx="56" cy="56" r="24" fill="#FF8A34"/>
+    <path d="M47 58C51.2 49.5 58.8 44 69 42.5C65.5 49.8 64.3 58.3 64.8 67.5C57.3 67.1 51.3 64.1 47 58Z" fill="#FFF3E8"/>
+    <text x="182" y="63" text-anchor="middle" fill="white" font-family="Vazirmatn, Tahoma, Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">پانسی</text>
+    <text x="182" y="84" text-anchor="middle" fill="#D8ECFF" font-family="Vazirmatn, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">PANSY</text>
+  </g>
+</svg>
