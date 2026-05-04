@@ -24,36 +24,36 @@ export const categories = [
   {
     slug:  "orange",
     title: "رانی پرتقال",
-    image: "/images/product-1-preview.jpg",
+    image: "/images/pansy-orange.png",
     dotColor: "orange" as const,
   },
   {
     slug:  "peach",
     title: "رانی شفتالو",
-    image: "/images/product-2-preview.jpg",
+    image: "/images/pansy-peach.png",
     dotColor: "orange" as const,
   },
   {
     slug:  "yeast",
     title: "خمیرمایه",
-    image: "/images/product-3-preview.jpg",
+    image: "/images/pansy-yeast.png",
     dotColor: "purple" as const,
   },
   {
     slug:  "packaged",
     title: "بسته‌بندی",
-    image: "/images/product-1-preview.jpg",
+    image: "/images/pansy-orange-3d.png",
     dotColor: "blue" as const,
   },
 ];
 
 export const products = [
-  { slug: "orange-rani",  title: "رانی پرتقال",  category: "آبمیوه", image: "/images/product-1-preview.jpg", excerpt: "طعم تازه پرتقال با بسته‌بندی قفسه‌پسند.", popular: true  },
-  { slug: "peach-rani",   title: "رانی شفتالو",  category: "آبمیوه", image: "/images/product-2-preview.jpg", excerpt: "نوشیدنی ملایم شفتالو برای خانواده.",     popular: true  },
-  { slug: "apple-rani",   title: "رانی سیب",     category: "آبمیوه", image: "/images/product-3-preview.jpg", excerpt: "انتخابی سبک برای سفارش عمده.",          popular: false },
-  { slug: "mixed-rani",   title: "رانی مخلوط",   category: "آبمیوه", image: "/images/product-1-preview.jpg", excerpt: "ترکیب چند میوه در یک بسته‌بندی.",       popular: true  },
-  { slug: "dry-yeast",    title: "خمیرمایه خشک", category: "مخمر",   image: "/images/product-2-preview.jpg", excerpt: "مخمر فعال برای نانوایی و صنعت.",        popular: true  },
-  { slug: "fast-yeast",   title: "خمیرمایه فوری", category: "مخمر",  image: "/images/product-3-preview.jpg", excerpt: "حل‌شونده سریع با کیفیت پایدار.",        popular: false },
+  { slug: "orange-rani",  title: "رانی پرتقال",   category: "آبمیوه", image: "/images/pansy-orange.png",       excerpt: "طعم تازه پرتقال با بسته‌بندی قفسه‌پسند.", popular: true  },
+  { slug: "peach-rani",   title: "رانی شفتالو",   category: "آبمیوه", image: "/images/pansy-peach.png",        excerpt: "نوشیدنی ملایم شفتالو برای خانواده.",     popular: true  },
+  { slug: "mixed-rani",   title: "رانی مخلوط",    category: "آبمیوه", image: "/images/pansy-orange-3d.png",    excerpt: "ترکیب چند میوه در یک بسته‌بندی.",       popular: true  },
+  { slug: "dry-yeast",    title: "خمیرمایه پانسی", category: "مخمر",  image: "/images/pansy-yeast.png",        excerpt: "مخمر فعال برای نانوایی و صنعت.",        popular: true  },
+  { slug: "flower-yeast", title: "خمیرمایه فلاور", category: "مخمر",  image: "/images/flower-yeast.png",       excerpt: "مخمر فوری فلاور با کیفیت بالا.",        popular: true  },
+  { slug: "orange-rani-2",title: "رانی پرتقال ویژه",category: "آبمیوه",image: "/images/pansy-orange-green.jpg",excerpt: "نسخه ویژه با بسته‌بندی خاص.",           popular: false },
 ];
 
 export const posts = [

@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const PRODUCTS = [
-  { src: "/images/product-1-preview.jpg", alt: "رانی پرتقال پانسی" },
-  { src: "/images/product-2-preview.jpg", alt: "رانی شفتالو پانسی" },
-  { src: "/images/product-3-preview.jpg", alt: "خمیرمایه پانسی"    },
+  { src: "/images/pansy-orange.png", alt: "رانی پرتقال پانسی" },
+  { src: "/images/pansy-peach.png",  alt: "رانی شفتالو پانسی" },
+  { src: "/images/pansy-yeast.png",  alt: "خمیرمایه پانسی"    },
 ];
 
 export function HeroRotator() {

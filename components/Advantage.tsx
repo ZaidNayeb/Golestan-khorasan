@@ -23,7 +23,7 @@ export function StorySection() {
         {/* Circular image — second in DOM = left column in RTL grid */}
         <div className="story-image-wrap">
           <div className="story-circle">
-            <img src="/images/product-2-preview.jpg" alt="داستان پانسی" />
+            <img src="/images/pansy-story.png" alt="داستان پانسی" />
           </div>
         </div>
       </div>
