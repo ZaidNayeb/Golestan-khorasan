@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         ink: "#0F172A",
         gold: "#F59E0B",
+        "brand-blue": "#1464CC",
+        "section-blue": "#DDE8F5",
+        "orange-accent": "#F97316",
+        "footer-navy": "#0B1F3A",
       },
       fontFamily: {
         sans: ["Vazirmatn", "Tahoma", "Arial", "sans-serif"]

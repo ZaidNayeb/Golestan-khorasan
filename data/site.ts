@@ -1,64 +1,65 @@
 export const siteConfig = {
   name: "گلستان خراسان",
-  tagline: "تولیدکننده مواد غذایی در هرات",
+  brand: "پانسی",
+  tagline: "از دل طبیعت",
   description:
-    "گلستان خراسان تولیدکننده نوشیدنی، آبمیوه و مخمر در هرات؛ آماده همکاری با فروشگاه‌ها، سوپرمارکت‌ها و خریداران عمده.",
+    "پانسی — آبمیوه‌های طبیعی، مخمر باکیفیت و محصولات غذایی بسته‌بندی شده از قلب خراسان.",
   url: "https://golestankhorasan.af",
   address: "هرات، ناحیه صنعتی، افغانستان",
   phone: "+93 700 000 000",
-  email: "info@golestankhorasan.af",
+  fax: "+93 700 000 001",
+  email: "info@pansy.af",
   workingHours: "شنبه تا پنجشنبه، ۸ صبح تا ۵ عصر"
 };
 
-export const navLinks = [
-  { href: "/",         label: "خانه" },
-  { href: "/products", label: "محصولات" },
-  { href: "/about",    label: "درباره ما" },
-  { href: "/blog",     label: "اخبار" },
-  { href: "/contact",  label: "تماس با ما" }
-];
-
-export const stats = [
-  { value: "+۲۰",  label: "محصول فعال" },
-  { value: "+۵۰۰", label: "فروشگاه همکار" },
-  { value: "هرات", label: "مرکز تولید" },
-  { value: "QC",   label: "کیفیت تضمین‌شده" }
+export const navLinks: { href: string; label: string; side: "right" | "left" }[] = [
+  { href: "/",         label: "صفحه نخست", side: "right" },
+  { href: "/products", label: "محصولات",    side: "right" },
+  { href: "/blog",     label: "اخبار",      side: "right" },
+  { href: "/about",    label: "درباره ما",  side: "left"  },
+  { href: "/contact",  label: "تماس با ما", side: "left"  },
 ];
 
 export const categories = [
   {
-    slug:  "juice",
-    title: "آبمیوه و نوشیدنی",
-    text:  "آبمیوه‌های طبیعی و نوشیدنی‌های آماده با بسته‌بندی قفسه‌پسند.",
-    image: "/images/product-1-preview.jpg"
+    slug:  "orange",
+    title: "رانی پرتقال",
+    image: "/images/product-1-preview.jpg",
+    dotColor: "orange" as const,
+  },
+  {
+    slug:  "peach",
+    title: "رانی شفتالو",
+    image: "/images/product-2-preview.jpg",
+    dotColor: "orange" as const,
   },
   {
     slug:  "yeast",
-    title: "مخمر و محصولات تخمیری",
-    text:  "مخمر باکیفیت برای نانوایی‌ها، کارخانه‌ها و مصرف صنعتی.",
-    image: "/images/product-2-preview.jpg"
+    title: "خمیرمایه",
+    image: "/images/product-3-preview.jpg",
+    dotColor: "purple" as const,
   },
   {
     slug:  "packaged",
-    title: "مواد غذایی بسته‌بندی شده",
-    text:  "سبد غذایی منظم برای فروشگاه‌ها، سوپرمارکت‌ها و پخش.",
-    image: "/images/product-3-preview.jpg"
-  }
+    title: "بسته‌بندی",
+    image: "/images/product-1-preview.jpg",
+    dotColor: "blue" as const,
+  },
 ];
 
 export const products = [
-  { slug: "mango-juice",    title: "آبمیوه انبه",        category: "آبمیوه",  image: "/images/product-1-preview.jpg", excerpt: "طعم گرم و شیرین با بسته‌بندی قفسه‌پسند.", popular: true  },
-  { slug: "orange-juice",   title: "آبمیوه پرتقال",      category: "آبمیوه",  image: "/images/product-2-preview.jpg", excerpt: "نوشیدنی تازه با رنگ روشن و ظاهر جذاب.", popular: true  },
-  { slug: "apple-juice",    title: "آبمیوه سیب",          category: "آبمیوه",  image: "/images/product-3-preview.jpg", excerpt: "انتخابی سبک برای خانواده و سفارش عمده.", popular: false },
-  { slug: "mixed-juice",    title: "آبمیوه مخلوط",        category: "آبمیوه",  image: "/images/product-1-preview.jpg", excerpt: "ترکیب چند میوه در یک بسته‌بندی مطمئن.",  popular: true  },
-  { slug: "dry-yeast",      title: "مخمر خشک",            category: "مخمر",   image: "/images/product-2-preview.jpg", excerpt: "مخمر فعال برای نانوایی و تولید صنعتی.",  popular: true  },
-  { slug: "instant-yeast",  title: "مخمر فوری",           category: "مخمر",   image: "/images/product-3-preview.jpg", excerpt: "حل شونده سریع با کیفیت پایدار در تولید.", popular: false },
+  { slug: "orange-rani",  title: "رانی پرتقال",  category: "آبمیوه", image: "/images/product-1-preview.jpg", excerpt: "طعم تازه پرتقال با بسته‌بندی قفسه‌پسند.", popular: true  },
+  { slug: "peach-rani",   title: "رانی شفتالو",  category: "آبمیوه", image: "/images/product-2-preview.jpg", excerpt: "نوشیدنی ملایم شفتالو برای خانواده.",     popular: true  },
+  { slug: "apple-rani",   title: "رانی سیب",     category: "آبمیوه", image: "/images/product-3-preview.jpg", excerpt: "انتخابی سبک برای سفارش عمده.",          popular: false },
+  { slug: "mixed-rani",   title: "رانی مخلوط",   category: "آبمیوه", image: "/images/product-1-preview.jpg", excerpt: "ترکیب چند میوه در یک بسته‌بندی.",       popular: true  },
+  { slug: "dry-yeast",    title: "خمیرمایه خشک", category: "مخمر",   image: "/images/product-2-preview.jpg", excerpt: "مخمر فعال برای نانوایی و صنعت.",        popular: true  },
+  { slug: "fast-yeast",   title: "خمیرمایه فوری", category: "مخمر",  image: "/images/product-3-preview.jpg", excerpt: "حل‌شونده سریع با کیفیت پایدار.",        popular: false },
 ];
 
 export const posts = [
   {
     slug:    "company-update",
-    title:   "گزارش تازه از مسیر توسعه گلستان خراسان",
+    title:   "گزارش تازه از مسیر توسعه پانسی",
     category:"اخبار شرکت",
     date:    "۱۵ حمل ۱۴۰۵",
     image:   "/images/product-1-preview.jpg",
@@ -66,11 +67,11 @@ export const posts = [
   },
   {
     slug:    "new-juice-line",
-    title:   "معرفی خط تازه آبمیوه‌های طبیعی",
+    title:   "معرفی خط تازه رانی‌های طبیعی",
     category:"محصول جدید",
     date:    "۲۸ حوت ۱۴۰۴",
     image:   "/images/product-2-preview.jpg",
-    excerpt: "سری تازه آبمیوه با تمرکز بر طعم‌های آشنا و بسته‌بندی مدرن آماده معرفی است."
+    excerpt: "سری تازه رانی با تمرکز بر طعم‌های آشنا و بسته‌بندی مدرن."
   },
   {
     slug:    "retail-guide",

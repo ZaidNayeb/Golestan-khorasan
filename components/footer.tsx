@@ -1,92 +1,120 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
-import { navLinks, categories, siteConfig } from "@/data/site";
+import { categories, siteConfig } from "@/data/site";
 
-const socialIcons = [
-  {
-    label: "اینستاگرام",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
-      </svg>
-    )
-  },
-  {
-    label: "فیسبوک",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-      </svg>
-    )
-  },
-  {
-    label: "لینکدین",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
-        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-        <rect x="2" y="9" width="4" height="12" />
-        <circle cx="4" cy="4" r="2" />
-      </svg>
-    )
-  }
+const companyLinks = [
+  { href: "/about",    label: "درباره ما"   },
+  { href: "/blog",     label: "اخبار"       },
+  { href: "/contact",  label: "تماس با ما"  },
+  { href: "/mixology", label: "میکسولوژی"   },
 ];
+
+function TreeSilhouettes() {
+  const trees = [
+    { cx: 60,   h: 220 },
+    { cx: 180,  h: 170 },
+    { cx: 320,  h: 250 },
+    { cx: 480,  h: 190 },
+    { cx: 640,  h: 270 },
+    { cx: 800,  h: 210 },
+    { cx: 960,  h: 240 },
+    { cx: 1120, h: 185 },
+    { cx: 1280, h: 255 },
+    { cx: 1400, h: 200 },
+  ];
+
+  return (
+    <svg
+      className="footer-trees"
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="xMidYMax slice"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      {trees.map(({ cx, h }, i) => {
+        const base = 320;
+        const top  = base - h;
+        const w    = h * 0.14;
+        const tw   = 4;
+
+        return (
+          <g key={i} fill="white">
+            {/* Crown: stacked ellipses give a cypress/poplar feel */}
+            <ellipse cx={cx} cy={top + h * 0.45} rx={w} ry={h * 0.5} />
+            {/* Trunk */}
+            <rect x={cx - tw / 2} y={base - 20} width={tw} height={20} />
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
 
 export function Footer() {
   return (
-    <footer className="bg-blue-950 text-white">
-      <div className="container py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="footer-v2">
+      <TreeSilhouettes />
 
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+        <div className="footer-grid">
           {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/10">
-                <img src="/images/pansy-logo.svg" alt="" className="h-7 w-7 brightness-0 invert" />
+          <div>
+            <div className="footer-brand-logo">
+              <span className="footer-brand-logo-circle">
+                <img
+                  src="/images/pansy-logo.svg"
+                  alt=""
+                  className="h-7 w-7 object-contain brightness-0 invert"
+                />
               </span>
-              <strong className="text-xl">گلستان خراسان</strong>
+              <strong className="text-xl font-black">{siteConfig.brand}</strong>
             </div>
-            <p className="mt-5 leading-7 text-white/60">
-              تولیدکننده آبمیوه، مخمر و محصولات غذایی بسته‌بندی شده در هرات.
-            </p>
-            <div className="mt-6 flex gap-3">
-              {socialIcons.map((item) => (
-                <a
-                  key={item.label}
-                  href="#"
-                  aria-label={item.label}
-                  className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-blue-600"
-                >
-                  {item.svg}
-                </a>
-              ))}
+            <p className="footer-tagline">{siteConfig.tagline}</p>
+            <div className="footer-socials">
+              {/* LinkedIn */}
+              <a href="#" aria-label="لینکدین" className="footer-social-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              {/* Instagram */}
+              <a href="#" aria-label="اینستاگرام" className="footer-social-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+              {/* Aparat */}
+              <a href="#" aria-label="آپارات" className="footer-social-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" />
+                  <polygon points="10,8 16,12 10,16" />
+                </svg>
+              </a>
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* Products */}
           <div>
-            <h3 className="font-bold text-white">دسترسی سریع</h3>
-            <ul className="mt-5 grid gap-3 text-sm text-white/60">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="transition hover:text-white">
-                    {link.label}
-                  </Link>
+            <h3 className="footer-col-title">محصولات</h3>
+            <ul className="footer-col-links">
+              {categories.map((cat) => (
+                <li key={cat.slug}>
+                  <Link href={`/products?category=${cat.slug}`}>{cat.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Products */}
+          {/* Company */}
           <div>
-            <h3 className="font-bold text-white">محصولات</h3>
-            <ul className="mt-5 grid gap-3 text-sm text-white/60">
-              {categories.map((cat) => (
-                <li key={cat.slug}>
-                  <Link href={`/products?category=${cat.slug}`} className="transition hover:text-white">
-                    {cat.title}
-                  </Link>
+            <h3 className="footer-col-title">شرکت</h3>
+            <ul className="footer-col-links">
+              {companyLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -94,27 +122,34 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-bold text-white">تماس</h3>
-            <ul className="mt-5 grid gap-4 text-sm text-white/60">
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-400" />
-                {siteConfig.address}
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0 text-blue-400" />
-                {siteConfig.phone}
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0 text-blue-400" />
-                {siteConfig.email}
-              </li>
-            </ul>
+            <h3 className="footer-col-title">گروه گلستان خراسان</h3>
+            <div className="footer-address-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              {siteConfig.address}
+            </div>
+            <div className="footer-address-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              {siteConfig.phone}
+            </div>
+            <div className="footer-address-line">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              {siteConfig.email}
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row">
-          <span>© ۱۴۰۵ گلستان خراسان. تمامی حقوق محفوظ است.</span>
-          <span>{siteConfig.workingHours}</span>
+        <div className="footer-bottom">
+          <p className="footer-copyright">
+            © ۱۴۰۵ کلیه حقوق مادی و معنوی این سایت متعلق به گروه گلستان خراسان (پانسی) می‌باشد
+          </p>
         </div>
       </div>
     </footer>
