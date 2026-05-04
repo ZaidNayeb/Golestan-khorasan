@@ -12,3 +12,9 @@ node_modules/
 # Misc
 .DS_Store
 *.log
+
+# Claude Code local config
+.claude/
+
+# Patch files
+*.patch
