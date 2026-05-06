@@ -5,7 +5,6 @@ import { ProductsSection } from "@/components/Categories";
 import { StorySection }   from "@/components/Advantage";
 import { PromiseSection } from "@/components/Promise";
 import { GallerySection } from "@/components/Gallery";
-import { HomeCTA }        from "@/components/HomeCTA";
 import { ContactDock }    from "@/components/ContactDock";
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function HomePage() {
       <StorySection />
       <PromiseSection />
       <GallerySection />
-      <HomeCTA />
       <ContactDock />
     </>
   );

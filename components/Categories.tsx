@@ -21,16 +21,13 @@ export function ProductsSection() {
           {homeProductCards.map((p, i) => (
             <Reveal key={p.name} delay={i * 0.1}>
               <Link href="/products" className={`product-card ${p.cls}`}>
-                <span className="product-card-bg-circle" />
+                <img src={p.img} alt={p.name} className="product-card-img" />
                 <div className="product-card-head">
                   <span className="product-card-cat">{p.cat}</span>
                   <span className="product-card-num en">{p.num} / 03</span>
                 </div>
-                <div style={{ position: "relative", zIndex: 2 }}>
-                  <h3 className="product-card-name">{p.name}</h3>
-                  <p className="product-card-desc">{p.desc}</p>
-                </div>
-                <img src={p.img} alt={p.name} className="product-card-img" />
+                <h3 className="product-card-name">{p.name}</h3>
+                <p className="product-card-desc">{p.desc}</p>
                 <span className="product-card-cta">
                   مشاهده محصول
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">

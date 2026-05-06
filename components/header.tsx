@@ -47,11 +47,6 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="lang-switch">
-            <button className="active">FA</button>
-            <button>EN</button>
-          </div>
-
           <button
             className="mobile-toggle"
             aria-label="باز کردن منو"

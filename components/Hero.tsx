@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { heroSlides, stats } from "@/data/site";
+import { heroSlides } from "@/data/site";
 
 export function Hero() {
   const [idx,  setIdx]  = useState(0);
@@ -26,10 +26,7 @@ export function Hero() {
         {/* Copy — right column in RTL */}
         <div className="hero-copy">
           <div className="hero-eyebrow reveal reveal-1">
-            <span className="dot" />
-            <span>{slide.cat}</span>
-            <span className="line" />
-            <span style={{ color: "var(--muted)" }}>گروه گلستان خراسان</span>
+            <img src="/images/pansy-logo.svg" alt="پانسی" className="hero-logo" />
           </div>
 
           <h1 className="hero-title reveal reveal-2">
@@ -45,20 +42,7 @@ export function Hero() {
           <div className="hero-actions reveal reveal-4">
             <Link href="/products" className="btn btn-primary">
               مشاهده محصولات
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
-              </svg>
             </Link>
-            <Link href="/about" className="btn btn-ghost">داستان پانسی</Link>
-          </div>
-
-          <div className="hero-stats reveal reveal-5">
-            {stats.map((s) => (
-              <div key={s.lbl}>
-                <span className="stat-num en">{s.num}</span>
-                <span className="stat-lbl">{s.lbl}</span>
-              </div>
-            ))}
           </div>
         </div>
 
