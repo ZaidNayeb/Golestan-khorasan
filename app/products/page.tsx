@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { PageBanner }     from "@/components/PageBanner";
 import { ProductsClient } from "@/components/ProductsClient";
+import { ContactDock }    from "@/components/ContactDock";
 
 export const metadata: Metadata = {
   title: "محصولات",
@@ -10,21 +12,16 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <section className="products-page-hero">
-        <div className="container">
-          <div className="products-page-hero-inner">
-            <p className="eyebrow">محصولات ما</p>
-            <h1 className="products-page-title">همه محصولات پانسی</h1>
-            <p className="products-page-subtitle">
-              آبمیوه‌های طبیعی، خمیرمایه‌های باکیفیت و محصولات غذایی بسته‌بندی شده از قلب خراسان
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <PageBanner
+        crumb="محصولات"
+        eyebrow="کاتالوگ پانسی"
+        title="همه‌ی محصولات ما، یکجا"
+        desc="از آبمیوه‌های طبیعی تا خمیرمایه‌ی صنعتی؛ سبد محصولات پانسی برای خانه و کسب‌و‌کار."
+      />
       <Suspense fallback={null}>
         <ProductsClient />
       </Suspense>
+      <ContactDock />
     </>
   );
 }
