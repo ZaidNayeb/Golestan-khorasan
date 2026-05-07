@@ -151,7 +151,7 @@ button { font-family: inherit; cursor: pointer; }
 ───────────────────────────────────────────────────────────── */
 .section-eyebrow {
   font-size: 13px;
-  color: var(--orange);
+  color: var(--brand-blue);
   font-weight: 700;
   letter-spacing: .12em;
   margin-bottom: 14px;
@@ -162,14 +162,14 @@ button { font-family: inherit; cursor: pointer; }
 .section-eyebrow::before {
   content: "";
   width: 22px; height: 2px;
-  background: var(--orange);
+  background: var(--brand-blue);
 }
 .section-title {
   font-size: clamp(36px, 4.5vw, 64px);
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -.02em;
-  color: var(--ink);
+  color: var(--brand-blue);
   margin: 0;
   max-width: 16ch;
   text-wrap: balance;
@@ -390,34 +390,42 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-stage {
   position: relative;
-  min-height: 680px;
+  min-height: 640px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: stretch;
   gap: 0;
 }
 @media (max-width: 920px) {
-  .hero-stage { grid-template-columns: 1fr; min-height: auto; }
+  .hero-stage { grid-template-columns: 1fr; min-height: auto; padding: 0 20px; }
 }
 
 .hero-copy {
-  padding: 80px 40px 80px 24px;
+  padding: 72px 36px 72px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 28px;
+  gap: 22px;
   position: relative;
   z-index: 2;
 }
 @media (max-width: 920px) {
-  .hero-copy { padding: 56px 24px 32px; }
+  .hero-copy { padding: 48px 24px 32px; }
 }
 
 .hero-logo {
-  height: 52px;
-  width: auto;
-  margin-bottom: 8px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  padding: 10px;
+  object-fit: contain;
+  background: var(--brand-blue-tint);
+  border: 2px solid var(--brand-blue-soft);
+  box-shadow: 0 4px 20px rgba(14, 79, 163, .14);
 }
 .hero-eyebrow {
   display: inline-flex;
@@ -442,11 +450,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .hero-title {
-  font-size: clamp(30px, 4.2vw, 58px);
+  font-size: clamp(28px, 3.8vw, 52px);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -.02em;
-  color: var(--ink);
+  color: var(--brand-blue);
   margin: 0;
   text-wrap: balance;
 }
@@ -455,10 +463,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .hero-desc {
-  font-size: 17px;
-  line-height: 2;
+  font-size: 15px;
+  line-height: 1.9;
   color: var(--ink-soft);
-  max-width: 46ch;
+  max-width: 38ch;
   margin: 0;
 }
 
@@ -499,7 +507,8 @@ button { font-family: inherit; cursor: pointer; }
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 0;
   overflow: hidden;
 }
 .hero-visual::before { display: none; }
@@ -507,9 +516,10 @@ button { font-family: inherit; cursor: pointer; }
 .hero-product {
   position: relative;
   z-index: 2;
-  width: 90%;
-  max-width: 560px;
-  filter: drop-shadow(0 24px 40px rgba(11, 18, 32, .15));
+  width: 100%;
+  max-width: 620px;
+  margin-right: -20px;
+  filter: drop-shadow(0 28px 44px rgba(11, 18, 32, .14));
   transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .4s ease;
 }
 .hero-product.swapping { opacity: 0; transform: translateY(20px); }
@@ -1130,7 +1140,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .page-banner-eyebrow {
   font-size: 13px;
-  color: var(--orange);
+  color: var(--brand-blue);
   font-weight: 700;
   letter-spacing: .12em;
   margin-bottom: 14px;
@@ -1141,12 +1151,12 @@ button { font-family: inherit; cursor: pointer; }
 .page-banner-eyebrow::before {
   content: "";
   width: 22px; height: 2px;
-  background: var(--orange);
+  background: var(--brand-blue);
 }
 .page-banner-title {
   font-size: clamp(40px, 5.6vw, 72px);
   font-weight: 900;
-  color: var(--ink);
+  color: var(--brand-blue);
   letter-spacing: -.02em;
   line-height: 1.08;
   margin: 14px 0 16px;
