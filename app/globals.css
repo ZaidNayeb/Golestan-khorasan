@@ -241,14 +241,14 @@ button { font-family: inherit; cursor: pointer; }
 .brand-mark .mark-circle {
   width: 42px; height: 42px;
   border-radius: 50%;
-  background: var(--brand-blue);
+  background: transparent;
   display: grid; place-items: center;
-  box-shadow: 0 6px 18px -6px rgba(14, 79, 163, .55);
   flex-shrink: 0;
 }
 .brand-mark .mark-circle img {
-  width: 24px; height: 24px;
-  filter: brightness(0) invert(1);
+  width: 57px; height: 57px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 .brand-name {
   font-weight: 900;
@@ -418,14 +418,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .hero-logo {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  padding: 10px;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
-  background: var(--brand-blue-tint);
-  border: 2px solid var(--brand-blue-soft);
-  box-shadow: 0 4px 20px rgba(14, 79, 163, .14);
+  mix-blend-mode: multiply;
 }
 .hero-eyebrow {
   display: inline-flex;
@@ -797,16 +793,16 @@ button { font-family: inherit; cursor: pointer; }
    PROMISE — three pillars
 ───────────────────────────────────────────────────────────── */
 .promise {
-  padding: 120px 0;
-  background: #fff;
+  padding: 100px 0 110px;
+  background: var(--brand-blue-tint);
 }
 .promise-head {
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 .promise-head .section-eyebrow { justify-content: center; }
 .promise-head .section-eyebrow::before { display: none; }
@@ -816,58 +812,60 @@ button { font-family: inherit; cursor: pointer; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1.5px solid rgba(14, 79, 163, .15);
 }
 @media (max-width: 920px) {
   .promise-grid { grid-template-columns: 1fr; }
 }
 .promise-cell {
-  padding: 56px 36px;
-  border-left: 1px solid var(--line);
+  padding: 56px 40px 52px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  border-left: 1.5px solid rgba(14, 79, 163, .15);
   transition: background .25s;
 }
-.promise-cell:first-child { border-right: 1px solid var(--line); }
-.promise-cell:hover { background: var(--brand-blue-tint); }
+.promise-cell:last-child { border-left: none; }
+.promise-cell:hover { background: rgba(14, 79, 163, .04); }
 
-.promise-num {
-  font-family: var(--font-en);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--orange);
-  letter-spacing: .08em;
+.promise-icon {
+  width: 96px; height: 96px;
+  display: grid; place-items: center;
+  color: var(--brand-blue);
+  margin-bottom: 24px;
 }
+.promise-icon svg { width: 96px; height: 96px; }
+
+.promise-icon-line {
+  width: 44px; height: 3px;
+  background: var(--brand-blue);
+  border-radius: 3px;
+  margin-bottom: 22px;
+  opacity: .4;
+}
+
 .promise-name {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 800;
-  color: var(--ink);
-  margin: 4px 0 6px;
+  color: var(--brand-blue);
+  margin: 0 0 14px;
   letter-spacing: -.01em;
 }
 .promise-desc {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.95;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  line-height: 2;
   margin: 0;
+  max-width: 28ch;
 }
-.promise-icon {
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  background: var(--brand-blue-soft);
-  display: grid; place-items: center;
-  color: var(--brand-blue);
-  margin-bottom: 8px;
-}
-.promise-icon svg { width: 26px; height: 26px; }
 
 /* ─────────────────────────────────────────────────────────────
    GALLERY STRIP
 ───────────────────────────────────────────────────────────── */
 .gallery {
-  padding: 0 0 120px;
+  padding: 80px 0 120px;
   background: #fff;
 }
 .gallery-grid {

@@ -26,7 +26,7 @@ export function Hero() {
         {/* Copy — right column in RTL */}
         <div className="hero-copy">
           <div className="hero-eyebrow reveal reveal-1">
-            <img src="/images/pansy-logo.svg" alt="پانسی" className="hero-logo" />
+            <img src="/images/pansy-logo-new.png" alt="پانسی" className="hero-logo" />
           </div>
 
           <h1 className="hero-title reveal reveal-2">

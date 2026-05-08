@@ -27,7 +27,7 @@ export function Header() {
         <div className="container header-row">
           <Link href="/" className="brand-mark">
             <span className="mark-circle">
-              <img src="/images/pansy-logo.svg" alt="پانسی" />
+              <img src="/images/pansy-logo-new.png" alt="پانسی" />
             </span>
             <span>
               <span className="brand-name">پانسی</span>
