@@ -96,7 +96,7 @@ export function Footer() {
               <circle cx="12" cy="12" r="9" />
               <path d="M12 7v5l3 2" />
             </svg>
-            <span>شنبه تا پنجشنبه، ۸ تا ۱۷</span>
+            <span>{siteConfig.workingHours}</span>
           </div>
         </div>
       </div>
@@ -106,9 +106,9 @@ export function Footer() {
           © ۱۴۰۵ کلیه حقوق متعلق به گروه گلستان خراسان (پانسی) است.
         </p>
         <div className="footer-extra">
-          <Link href="#">حریم خصوصی</Link>
-          <Link href="#">شرایط استفاده</Link>
-          <Link href="#">نقشه‌ی سایت</Link>
+          <Link href="/privacy">حریم خصوصی</Link>
+          <Link href="/terms">شرایط استفاده</Link>
+          <Link href="/sitemap">نقشه‌ی سایت</Link>
         </div>
       </div>
     </footer>
