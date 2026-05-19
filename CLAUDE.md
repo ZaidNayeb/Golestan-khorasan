@@ -45,3 +45,7 @@ No test runner is configured.
 ## Additional Documentation
 
 - [Architectural Patterns](.claude/docs/architectural_patterns.md) — component split, data layer, styling conventions, animation patterns
+
+## AI Assistant Rules
+
+- Never leave any trace of AI involvement in commits, PRs, or any git history (no "Co-Authored-By: Claude" lines, no AI-related commit messages, no mentions of Claude or Anthropic anywhere in the repo)
