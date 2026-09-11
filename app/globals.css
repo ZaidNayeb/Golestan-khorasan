@@ -869,6 +869,63 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* ─────────────────────────────────────────────────────────────
+   TIMELINE (about page)
+───────────────────────────────────────────────────────────── */
+.timeline {
+  padding: 100px 0 110px;
+  background: #fff;
+}
+.timeline-head { margin-bottom: 64px; }
+
+.timeline-list {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 6px; bottom: 6px; right: 9px;
+  width: 2px;
+  background: var(--line);
+}
+.timeline-item {
+  position: relative;
+  padding-right: 44px;
+  padding-bottom: 48px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute;
+  right: 0; top: 3px;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--brand-blue);
+}
+.timeline-year {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.timeline-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--brand-blue);
+  margin: 0 0 8px;
+  letter-spacing: -.01em;
+}
+.timeline-desc {
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 56ch;
+}
+
+/* ─────────────────────────────────────────────────────────────
    GALLERY STRIP
 ───────────────────────────────────────────────────────────── */
 .gallery {
