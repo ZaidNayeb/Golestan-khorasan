@@ -1,10 +1,10 @@
-import Link from "next/link";
+import { socialUrls } from "@/lib/social";
 
 const SOCIALS = [
   {
     key:   "ig",
     label: "اینستاگرام",
-    href:  "#",
+    href:  socialUrls.instagram,
     color: "#E1306C",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
@@ -17,7 +17,7 @@ const SOCIALS = [
   {
     key:   "fb",
     label: "فیسبوک",
-    href:  "#",
+    href:  socialUrls.facebook,
     color: "#1877F2",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -28,7 +28,7 @@ const SOCIALS = [
   {
     key:   "tg",
     label: "تلگرام",
-    href:  "#",
+    href:  socialUrls.telegram,
     color: "#0088CC",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -39,7 +39,7 @@ const SOCIALS = [
   {
     key:   "wa",
     label: "واتس‌اپ",
-    href:  "#",
+    href:  socialUrls.whatsapp,
     color: "#25D366",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -50,20 +50,25 @@ const SOCIALS = [
 ];
 
 export function ContactDock() {
+  const visible = SOCIALS.filter(s => s.href);
+  if (visible.length === 0) return null;
+
   return (
     <div className="contact-dock">
       <div className="contact-dock-accent" />
       <div className="contact-dock-icons">
-        {SOCIALS.map((s) => (
-          <Link
+        {visible.map((s) => (
+          <a
             key={s.key}
             href={s.href}
             aria-label={s.label}
             className="contact-dock-icon"
             style={{ color: s.color }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {s.icon}
-          </Link>
+          </a>
         ))}
       </div>
     </div>
