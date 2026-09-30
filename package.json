@@ -2,7 +2,7 @@
   "name": "pansy-foods",
   "version": "1.0.0",
   "private": true,
-  "description": "Pansy Foods corporate website — Next.js + Sanity",
+  "description": "Pansy Foods corporate website — Next.js + TypeScript + Tailwind",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

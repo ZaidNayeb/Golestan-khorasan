@@ -8,7 +8,6 @@ import { GallerySection } from "@/components/Gallery";
 import { ContactDock }    from "@/components/ContactDock";
 
 export const metadata: Metadata = {
-  title: "خانه",
   description: "پانسی — آبمیوه‌های طبیعی، مخمر باکیفیت و محصولات غذایی بسته‌بندی شده از قلب خراسان.",
 };
 
