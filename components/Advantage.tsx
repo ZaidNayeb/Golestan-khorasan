@@ -19,9 +19,9 @@ export function StorySection() {
             اولیه‌ی طبیعی، محصولات پانسی در سراسر کشور توزیع می‌شود.
           </p>
           <div className="story-meta">
-            <div><span className="num">25+</span><span className="lbl">سال تجربه</span></div>
-            <div><span className="num">12</span><span className="lbl">محصول فعال</span></div>
-            <div><span className="num">34</span><span className="lbl">استان توزیع</span></div>
+            <div><span className="num">۲۵+</span><span className="lbl">سال تجربه</span></div>
+            <div><span className="num">۱۲</span><span className="lbl">محصول فعال</span></div>
+            <div><span className="num">۳۴</span><span className="lbl">استان توزیع</span></div>
           </div>
           <div style={{ marginTop: 8 }}>
             <Link href="/news" className="btn btn-ghost" style={{ alignSelf: "flex-start" }}>
@@ -35,9 +35,30 @@ export function StorySection() {
 
         {/* Visual — left column in RTL */}
         <Reveal delay={0.15} className="story-visual">
-          <div className="story-placeholder">FACTORY / ORCHARD PHOTO · 4:5</div>
+          {/* TODO: Replace with a real factory / orchard photo when available. */}
+          <div
+            className="story-placeholder"
+            style={{
+              background: "linear-gradient(160deg, #0E4FA3 0%, #1565c0 55%, #0a3d7a 100%)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img
+              src="/images/pansy-logo-new.png"
+              alt="پانسی"
+              style={{ width: 88, opacity: 0.18, filter: "brightness(10) saturate(0)" }}
+            />
+          </div>
           <div className="badge">
-            <span className="badge-circle">P</span>
+            <span className="badge-circle">
+              <img
+                src="/images/pansy-logo-new.png"
+                alt="پانسی"
+                style={{ width: 28, height: 28, objectFit: "contain" }}
+              />
+            </span>
             از سال ۱۳۷۸ تا کنون
           </div>
         </Reveal>

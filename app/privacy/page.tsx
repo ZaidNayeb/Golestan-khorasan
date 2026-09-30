@@ -1,44 +1,111 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactDock } from "@/components/ContactDock";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "حریم خصوصی",
-  description: "سیاست حفظ حریم خصوصی گروه گلستان خراسان (پانسی).",
+  description: "سیاست حفظ حریم خصوصی گروه گلستان خراسان (پانسی) — چگونه اطلاعات شما را جمع‌آوری، استفاده و حفاظت می‌کنیم.",
 };
 
+// TODO: This policy should be reviewed by the company and/or a legal advisor before final publication.
 export default function PrivacyPage() {
   return (
     <>
-      <section className="coming-soon">
-        <div className="container cs-inner">
-          <span className="cs-badge">
-            <span className="dot" />
-            <span>به زودی</span>
-          </span>
+      <section className="legal-page">
+        <div className="container">
+          <div className="legal-inner">
+            <p className="legal-date">آخرین بروزرسانی: مرداد ۱۴۰۵</p>
+            <h1>سیاست حفظ حریم خصوصی</h1>
+            <p className="legal-lead">
+              گروه گلستان خراسان (پانسی) به حریم خصوصی بازدیدکنندگان وب‌سایت خود احترام می‌گذارد.
+              این سیاست توضیح می‌دهد که چه اطلاعاتی جمع‌آوری می‌شود، چگونه استفاده می‌شود، و
+              حقوق شما در این زمینه چیست.
+            </p>
 
-          <h1 className="cs-title">
-            صفحه‌ی <span className="accent">حریم خصوصی</span>
-            <br />در راه است
-          </h1>
+            <h2>۱. اطلاعاتی که جمع‌آوری می‌کنیم</h2>
+            <p>
+              هنگامی که از طریق فرم تماس با ما ارتباط برقرار می‌کنید، ممکن است اطلاعات زیر را
+              از شما دریافت کنیم:
+            </p>
+            <ul>
+              <li>نام و نام خانوادگی</li>
+              <li>شماره تماس (اختیاری)</li>
+              <li>آدرس ایمیل (اختیاری)</li>
+              <li>موضوع و متن پیام شما</li>
+            </ul>
+            <p>
+              ما هیچ‌گونه اطلاعات مالی، رمز عبور، یا داده‌های حساس دیگری جمع‌آوری نمی‌کنیم.
+              این وب‌سایت فاقد سیستم ثبت‌نام کاربری یا پرداخت آنلاین است.
+            </p>
 
-          <p className="cs-desc">
-            سیاست حفظ حریم خصوصی گروه گلستان خراسان به زودی در این صفحه منتشر خواهد شد.
-            برای هرگونه سوال می‌توانید با ما تماس بگیرید.
-          </p>
+            <h2>۲. نحوه‌ی استفاده از اطلاعات</h2>
+            <p>اطلاعاتی که از شما دریافت می‌کنیم صرفاً برای پاسخگویی به پیام شما استفاده می‌شود.
+            ما این اطلاعات را برای ارسال محتوای تبلیغاتی استفاده نمی‌کنیم و به فهرست‌های
+            خبرنامه‌ی خودکار اضافه نمی‌کنیم.</p>
 
-          <div className="cs-illustration">
-            <img src="/images/pansy-orange-3d.png" alt="پانسی" />
-          </div>
+            <h2>۳. اشتراک‌گذاری اطلاعات با اشخاص ثالث</h2>
+            <p>
+              گروه گلستان خراسان اطلاعات شخصی شما را به سازمان‌ها یا اشخاص ثالث نمی‌فروشد،
+              اجاره نمی‌دهد و یا بدون رضایت شما در اختیار آن‌ها قرار نمی‌دهد، مگر در مواردی که
+              قانون ایجاب کند.
+            </p>
+            <p>
+              برای دریافت و ذخیره‌سازی پیام‌های فرم تماس از سرویس Formspree استفاده می‌شود.
+              پیام‌های ارسالی توسط این سرویس پردازش می‌شوند و سیاست حریم خصوصی آن‌ها در
+              وب‌سایت Formspree قابل مشاهده است.
+            </p>
 
-          <div className="cs-actions">
-            <Link href="/" className="btn btn-primary">
-              صفحه نخست
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
-              </svg>
-            </Link>
-            <Link href="/contact" className="btn btn-ghost">تماس با ما</Link>
+            <h2>۴. کوکی‌ها</h2>
+            <p>
+              این وب‌سایت ممکن است از کوکی‌های فنی ضروری برای عملکرد صحیح صفحات استفاده کند.
+              ما در حال حاضر از کوکی‌های تبلیغاتی یا ردیابی شخصی‌سازی‌شده استفاده نمی‌کنیم.
+              در صورت افزودن سرویس‌های تحلیلی در آینده، این بخش بروزرسانی خواهد شد.
+            </p>
+
+            <h2>۵. امنیت اطلاعات</h2>
+            <p>
+              ما تلاش می‌کنیم با استفاده از پروتکل‌های امنیتی استاندارد (HTTPS) از اطلاعات شما
+              در برابر دسترسی غیرمجاز محافظت کنیم. با این حال هیچ روش انتقال اطلاعات از طریق
+              اینترنت ۱۰۰٪ امن نیست.
+            </p>
+
+            <h2>۶. حقوق شما</h2>
+            <p>شما حق دارید:</p>
+            <ul>
+              <li>از نوع اطلاعاتی که از شما ذخیره شده مطلع شوید.</li>
+              <li>درخواست اصلاح یا حذف اطلاعات خود را بدهید.</li>
+              <li>در هر زمان از ارتباط‌های بازاریابی خارج شوید (در صورت وجود).</li>
+            </ul>
+            <p>برای هرگونه درخواست مرتبط با حریم خصوصی، با ما تماس بگیرید.</p>
+
+            <h2>۷. تغییر در این سیاست</h2>
+            <p>
+              گروه گلستان خراسان حق دارد این سیاست را هر زمان بروزرسانی کند. آخرین نسخه همیشه
+              در همین صفحه قابل دسترس است و تاریخ «آخرین بروزرسانی» در بالای صفحه نمایش داده
+              می‌شود.
+            </p>
+
+            <h2>۸. تماس با ما</h2>
+            <p>
+              برای هرگونه سوال یا درخواست در مورد حریم خصوصی، با ما از طریق اطلاعات زیر
+              در تماس باشید:
+            </p>
+            <ul>
+              <li>ایمیل: <span className="en">{siteConfig.email}</span></li>
+              <li>تلفن: <span className="en">{siteConfig.phone}</span></li>
+              <li>آدرس: {siteConfig.address}</li>
+            </ul>
+
+            <div className="legal-actions">
+              <Link href="/" className="btn btn-primary">
+                صفحه نخست
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
+                </svg>
+              </Link>
+              <Link href="/contact" className="btn btn-ghost">تماس با ما</Link>
+            </div>
           </div>
         </div>
       </section>

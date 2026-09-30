@@ -1,44 +1,94 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ContactDock } from "@/components/ContactDock";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "شرایط استفاده",
-  description: "شرایط و ضوابط استفاده از وب‌سایت گروه گلستان خراسان (پانسی).",
+  description: "شرایط و ضوابط استفاده از وب‌سایت گروه گلستان خراسان (پانسی) — مالکیت معنوی، سلب مسئولیت، و قوانین استفاده.",
 };
 
+// TODO: This document should be reviewed by the company and/or a legal advisor before final publication.
 export default function TermsPage() {
   return (
     <>
-      <section className="coming-soon">
-        <div className="container cs-inner">
-          <span className="cs-badge">
-            <span className="dot" />
-            <span>به زودی</span>
-          </span>
+      <section className="legal-page">
+        <div className="container">
+          <div className="legal-inner">
+            <p className="legal-date">آخرین بروزرسانی: مرداد ۱۴۰۵</p>
+            <h1>شرایط و ضوابط استفاده</h1>
+            <p className="legal-lead">
+              با استفاده از وب‌سایت گروه گلستان خراسان (پانسی)، شما با شرایط زیر موافقت می‌کنید.
+              لطفاً پیش از استفاده این شرایط را به‌دقت مطالعه کنید.
+            </p>
 
-          <h1 className="cs-title">
-            صفحه‌ی <span className="accent">شرایط استفاده</span>
-            <br />در راه است
-          </h1>
+            <h2>۱. پذیرش شرایط</h2>
+            <p>
+              دسترسی به وب‌سایت {siteConfig.url.replace("https://", "")} و استفاده از آن به منزله‌ی
+              پذیرش کامل شرایط و ضوابط این سند است. اگر با این شرایط موافق نیستید، لطفاً از وب‌سایت
+              خارج شوید.
+            </p>
 
-          <p className="cs-desc">
-            شرایط و ضوابط استفاده از وب‌سایت و خدمات گروه گلستان خراسان به زودی
-            در این صفحه منتشر خواهد شد.
-          </p>
+            <h2>۲. استفاده از وب‌سایت</h2>
+            <p>شما موافقت می‌کنید که وب‌سایت را صرفاً برای اهداف قانونی و مجاز استفاده کنید. موارد زیر ممنوع است:</p>
+            <ul>
+              <li>هرگونه استفاده‌ی گمراه‌کننده یا تقلبی</li>
+              <li>ارسال محتوای مضر، توهین‌آمیز یا ناقض حقوق دیگران از طریق فرم تماس</li>
+              <li>تلاش برای نفوذ یا آسیب رساندن به سرورها و زیرساخت وب‌سایت</li>
+              <li>جمع‌آوری خودکار داده‌ها (web scraping) بدون مجوز کتبی</li>
+            </ul>
 
-          <div className="cs-illustration">
-            <img src="/images/pansy-orange-3d.png" alt="پانسی" />
-          </div>
+            <h2>۳. مالکیت معنوی</h2>
+            <p>
+              تمام محتوای این وب‌سایت شامل متون، تصاویر، لوگو، علائم تجاری «پانسی»، و طراحی
+              صفحات متعلق به گروه گلستان خراسان است و تحت قوانین مالکیت معنوی محافظت می‌شود.
+            </p>
+            <p>
+              بازتولید، توزیع یا استفاده‌ی تجاری از هر بخشی از این محتوا بدون اجازه‌ی کتبی گروه
+              گلستان خراسان ممنوع است. استفاده‌ی شخصی و غیرتجاری به شرط حفظ منبع مجاز است.
+            </p>
 
-          <div className="cs-actions">
-            <Link href="/" className="btn btn-primary">
-              صفحه نخست
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
-              </svg>
-            </Link>
-            <Link href="/contact" className="btn btn-ghost">تماس با ما</Link>
+            <h2>۴. دقت اطلاعات</h2>
+            <p>
+              ما تلاش می‌کنیم اطلاعات این وب‌سایت را دقیق و بروز نگه داریم. با این حال، گروه
+              گلستان خراسان هیچ ضمانتی برای کامل بودن یا بروز بودن اطلاعات نمی‌دهد و در قبال
+              هرگونه خطا یا تغییر در مشخصات محصولات مسئولیتی نمی‌پذیرد.
+            </p>
+
+            <h2>۵. سلب مسئولیت</h2>
+            <p>
+              این وب‌سایت به صورت «همان‌گونه که هست» ارائه می‌شود. گروه گلستان خراسان هیچ
+              ضمانت صریح یا ضمنی در مورد در دسترس بودن، بدون وقفه بودن یا عاری از خطا بودن
+              وب‌سایت نمی‌دهد.
+            </p>
+            <p>
+              پیوندهای خارجی (در صورت وجود) صرفاً برای راحتی کاربران ارائه می‌شوند. گروه
+              گلستان خراسان هیچ مسئولیتی در قبال محتوا یا سیاست‌های وب‌سایت‌های خارجی ندارد.
+            </p>
+
+            <h2>۶. تغییر در شرایط</h2>
+            <p>
+              گروه گلستان خراسان حق دارد این شرایط را در هر زمان تغییر دهد. آخرین نسخه با تاریخ
+              «آخرین بروزرسانی» در بالای همین صفحه قابل دسترس است. استفاده‌ی مستمر از وب‌سایت
+              پس از انتشار تغییرات به منزله‌ی پذیرش شرایط جدید است.
+            </p>
+
+            <h2>۷. تماس با ما</h2>
+            <p>برای هرگونه سوال در مورد این شرایط با ما تماس بگیرید:</p>
+            <ul>
+              <li>ایمیل: <span className="en">{siteConfig.email}</span></li>
+              <li>آدرس: {siteConfig.address}</li>
+            </ul>
+
+            <div className="legal-actions">
+              <Link href="/" className="btn btn-primary">
+                صفحه نخست
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 12H5" /><path d="M12 19l-7-7 7-7" />
+                </svg>
+              </Link>
+              <Link href="/contact" className="btn btn-ghost">تماس با ما</Link>
+            </div>
           </div>
         </div>
       </section>
