@@ -35,20 +35,11 @@ export function StorySection() {
 
         {/* Visual — left column in RTL */}
         <Reveal delay={0.15} className="story-visual">
-          {/* TODO: Replace with a real factory / orchard photo when available. */}
-          <div
-            className="story-placeholder"
-            style={{
-              background: "linear-gradient(160deg, #0E4FA3 0%, #1565c0 55%, #0a3d7a 100%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+          <div className="story-placeholder" style={{ padding: 0, overflow: "hidden" }}>
             <img
-              src="/images/pansy-logo-new.png"
-              alt="پانسی"
-              style={{ width: 88, opacity: 0.18, filter: "brightness(10) saturate(0)" }}
+              src="/images/sunlit orchard valley with snowy peaks.png"
+              alt="باغ‌های خراسان"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />
           </div>
           <div className="badge">
